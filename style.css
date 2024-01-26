@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Ubuntu:wght@400;700&display=swap');
+
+/* --------------- Root --------------- */
+:root {
+    --white: #ffffff;
+    --lightBlue: #F3F5FC;
+    --darkBlue: #0A3871;
+    --gray-80: #cccccc;
+    --gray-300: rgba(174, 174, 192, 0.4);
+    --gray-400: #495057;
+    --gray-500: #343A40;
+    --blackShadow: rgba(0, 0, 0, 0.08);
+}
+
+/* --------------- Body --------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: var(--lightBlue);
+}
+
+/* --------------- Header --------------- */
+header {
+    /* position: absolute; */
+    width: 100%;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 0 0 16px 16px;
+    background-color: var(--white);
+    box-shadow: 12px 12px 10px var(--gray-80),
+                -12px -12px 10px var(--white),
+                -12px 12px 10px var(--gray-80),
+                12px -12px 10px var(--white);
+}
+
+.logo {
+    /* position: absolute; */
+    margin: 24px 0 24px;
+    width: 25%;
+}
+
+h1 {
+    margin: 22px 0 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: center;
+    color: var(--darkBlue);
+}
+
+/* --------------- Main --------------- */
+main {
+    width: 343px;
+    margin: 50px 16px 50px 16px;
+    background-color: var(--lightBlue);
+}
+
+/* --------------- Encriptar / TextArea --------------- */
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.inputTexto {
+    width: 100%;
+    height: 350px;
+    font-size: 2em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+    resize: none;
+    border: none;
+    text-transform: lowercase;
+}
+
+.inputTexto::placeholder {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--darkBlue);
+}
+
+.inputTexto:focus {
+    outline: none;
+}
+
+/* --------------- Información --------------- */
+.informacion {
+    height: 18px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: center;
+    gap: 8px;
+}
+
+.fa-circle-exclamation {
+    color: #67808E;
+}
+
+h6 {
+    font-size: 0.75em;
+    font-weight: 400;
+    line-height: 1.125em;
+    color: var(--gray-400);
+}
+
+/* --------------- Botones --------------- */
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 16px auto 0;
+}
+
+.btn {
+    text-decoration: none;
+    width: 100%;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 1em;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1875em;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#btnEncriptar {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    border: transparent solid 4px;
+    box-shadow: -10px -10px 30px var(--white),
+                10px 10px 30px var(--gray-300);
+}
+
+#btnEncriptar:hover {
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+#btnEncriptar:active {
+    border: var(--lightBlue) solid 4px;
+    box-shadow: -10px -10px 30px var(--lightBlue),
+                10px 10px 30px var(--gray-300),
+                inset -3px -3px 10px #0d4993,
+                inset 3px 3px 10px var(--gray-300);
+}
+
+#btnDesencriptar {
+    border: transparent solid 4px;
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+    box-shadow: -10px -10px 30px var(--white),
+                10px 10px 30px var(--gray-300);
+}
+
+#btnDesencriptar:hover {
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+#btnDesencriptar:active {
+    border: var(--white) solid 4px;
+    box-shadow: -10px -10px 30px var(--white),
+                10px 10px 30px var(--gray-300),
+                inset -3px -3px 10px var(--white),
+                inset 3px 3px 10px var(--gray-300);;
+}
+
+/* --------------- Desencriptar --------------- */
+.resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 64px auto 40px;
+    padding: 32px;
+    gap: 16px;
+    width: 100%;
+    height: 250px;
+    background-color: var(--white);
+    border-radius: 32px;
+    box-shadow: -12px -12px 10px var(--gray-80),
+                12px 12px 10px var(--white),
+                12px 12px 10px var(--gray-80),
+                -12px -12px 10px var(--white);
+    box-sizing: border-box;
+}
+
+.resultado p {
+    height: 58px;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 120%;
+    text-align: center;
+    color: var(--gray-500);
+}
+
+.resultado img {
+    display: none;
+}
+
+/* --------------- TextArea --------------- */
+.txtResultado {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 110%;
+    color: var(--gray-400);
+    border: none;
+    resize: none;
+    text-transform: lowercase;
+}
+
+.txtResultado::placeholder {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 110%;
+    text-align: center;
+    color: var(--gray-400);
+    border: none;
+}
+
+.txtResultado:focus {
+    outline: none;
+}
+
+/* --------------- Copiar --------------- */
+.btnCopiar {
+    text-decoration: none;
+    width: 100%;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 1em;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.1875em;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--darkBlue);
+    display: none;
+    cursor: pointer;
+    border: transparent solid 4px;
+    background-color: var(--lightBlue);
+    box-shadow: -10px -10px 30px var(--white),
+                10px 10px 30px var(--gray-300);
+    transition: .5s;
+}
+
+.btnCopiar i {
+    padding: 0 5px 0 0;
+}
+
+.btnCopiar:hover {
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+.btnCopiar:active {
+    border: var(--white) solid 4px;
+    box-shadow: -10px -10px 30px var(--white),
+                10px 10px 30px var(--gray-300),
+                inset -3px -3px 10px var(--white),
+                inset 3px 3px 10px var(--gray-300);;
+}
+
+/* --------------- Footer --------------- */
+footer {
+    height: 150px;
+    padding: 0 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    -webkit-filter:  drop-shadow(-8px 8px 10px #07274f);
+            filter: drop-shadow(8px -8px 10px #0d4993);
+            filter: drop-shadow(8px 8px 10px #07274f);
+            filter: drop-shadow(-8px 8px 10px #0d4993);
+}
+
+/* --------------- Wave --------------- */
+.wave-footer {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+}
+
+/* --------------- Creditos --------------- */
+.creditosContenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.creditos {
+    text-align: center;
+    font-size: 1em;
+    margin: 10px 0 10px 0;
+    color: var(--white);
+    z-index: 1;
+}
+
+.creditos:hover, .creditos>a:hover {
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.creditos>a {
+    color: var(--lightBlue);
+    text-decoration: none;
+    padding-left: 5px;
+    z-index: 1;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.creditos>a:hover {
+    text-decoration: underline;
+}
+
+.creditos>a:active {
+    color: var(--gray-80);
+}
+
+/* --------------- Tablet --------------- */
+@media screen and (min-width: 768px) {
+
+    /* --------------- Header --------------- */
+    header {
+        height: 125px;
+        border-radius: 0 0 24px 24px;
+    }
+
+    .logo {
+        margin: 50px 0 50px 40px;
+        width: 15%;
+    }
+
+    h1 {
+        margin: 42px auto 25px;
+        font-size: 3.5em;
+    }
+
+    /* --------------- Main --------------- */
+    main {
+        margin: 50px 40px;
+        width: 688px;
+        height: 100vh;
+    }
+
+    /* --------------- Encriptar / TextArea --------------- */
+    form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .inputTexto {
+        height: 250px;
+    }
+
+    /* --------------- Botones --------------- */
+    .botones {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* --------------- Desencriptar --------------- */
+    .resultado {
+        align-items: center;
+        height: 200px;
+    }
+
+    /* --------------- Creditos --------------- */
+    .creditosContenedor {
+        flex-direction: column;
+    }
+
+}
+
+/* --------------- Desktop --------------- */
+@media screen and (min-width: 1200px) {
+
+    /* --------------- Header --------------- */
+    header {
+        width: 100%;
+        height: 120px;
+        border-radius: 0 0 32px 32px;
+    }
+
+    .logo {
+        margin: 40px 0 40px 40px;
+        width: 10%;
+    }
+
+    h1 {
+        margin: 40px auto 40px;
+        font-size: 4em;
+    }
+
+    /* --------------- Main --------------- */
+    main {
+        width: 100%;
+        height: 100vh;
+        margin: 50px 40px 120px 130px;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        box-sizing: border-box;
+    }
+
+    /* --------------- Encriptar / TextArea --------------- */
+    .izq {
+        width: 50%;
+        padding: 25px;
+        border-radius: 32px;
+        background-color: var(--white);
+        box-shadow: -12px -12px 10px var(--gray-80),
+                    12px 12px 10px var(--white),
+                    12px 12px 10px var(--gray-80),
+                    -12px -12px 10px var(--white);
+    }
+
+    .inputTexto {
+        height: 100%;
+        background-color: transparent;
+    }
+
+    /* --------------- Información --------------- */
+    .informacion {
+        margin: 100px auto 0;
+    }
+
+    /* --------------- Botones --------------- */
+    .botones {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* --------------- Desencriptar --------------- */
+    .der {
+        width: 35%;
+        height: 100%;
+    }
+
+    .resultado {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        box-shadow: 12px -12px 10px var(--gray-80),
+                    -12px 12px 10px var(--white),
+                    -12px 12px 10px var(--gray-80),
+                    12px -12px 10px var(--white);
+    }
+
+    .resultado img {
+        display: inherit;
+    }
+
+    /* --------------- TextArea --------------- */
+    .txtResultado {
+        height: 100%;
+    }
+
+    /* --------------- Creditos --------------- */
+    .creditosContenedor {
+        flex-direction: column;
+    }
+}
